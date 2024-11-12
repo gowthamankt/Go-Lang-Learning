@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	revenue := input1("Revenue: ")
+	expenses := input2("Expenses: ")
+	taxRate := input3("Tax_Rate: ")
+
+	ebt := revenue - expenses
+	profit := ebt * (1 - taxRate/100)
+	ratio := ebt / profit
+
+	fmt.Println(ebt)
+	fmt.Println(profit)
+	fmt.Println(ratio)
+
+}
+
+func input1(text string) float64 {
+	var value float64
+	fmt.Print(text)
+	fmt.Scan(&value)
+	return value
+}
+
+func input2(text string) float64 {
+	var value float64
+	fmt.Print(text)
+	fmt.Scan(&value)
+	return value
+}
+
+func input3(text string) float64 {
+	var value float64
+	fmt.Print(text)
+	fmt.Scan(&value)
+	return value
+}
