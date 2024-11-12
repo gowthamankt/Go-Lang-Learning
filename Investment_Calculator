@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+	var amount float64
+	var years float64
+
+	fmt.Print("Amount: ")
+	fmt.Scan(&amount)
+
+	fmt.Print("Years: ")
+	fmt.Scan(&years)
+
+	Final := amount * years
+	fmt.Println(Final)
+
+}
