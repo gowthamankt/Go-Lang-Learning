@@ -1,0 +1,60 @@
+package main
+
+import "fmt"
+
+func main() {
+	accountBalance := 10000.0
+
+	fmt.Println("Welcome to the Bank!")
+
+	for {
+		fmt.Println("Select the operation to perform")
+		fmt.Println("1.Check Balance")
+		fmt.Println("2.Deposit Money")
+		fmt.Println("3.Withdraw Money")
+		fmt.Println("4.Exit")
+
+		fmt.Print("Your Choice: ")
+		var choice int
+		fmt.Scan(&choice)
+
+		if choice == 1 {
+			fmt.Println("Your Balance is = ", accountBalance)
+		} else if choice == 2 {
+			fmt.Print("Enter Your deposit amount = ")
+			var depositAmount float64
+			fmt.Scan(&depositAmount)
+
+			if depositAmount <= 0 {
+				println("The amount must be greater than 0")
+				break
+			}
+
+			updatedAmount := accountBalance + depositAmount
+			fmt.Println("Your updated balance is = ", updatedAmount)
+		} else if choice == 3 {
+			fmt.Print("Enter Your withdraw amount = ")
+			var withdrawAmount float64
+			fmt.Scan(&withdrawAmount)
+
+			if withdrawAmount <= 0 {
+				println("The amount must be greater than 0")
+				return
+			}
+
+			if withdrawAmount > accountBalance {
+				println("Insufficient Balance")
+				return
+			}
+
+			fmt.Println("Amount withdraw succesfully!")
+			Amount := accountBalance - withdrawAmount
+			fmt.Println("Your updated balance is = ", Amount)
+		} else {
+			fmt.Println("ThankYou!")
+			break
+		}
+
+	}
+
+}
