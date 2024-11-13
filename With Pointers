@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	age := 22
+	var pointer *int
+	pointer = &age
+	fmt.Println("Age:", *pointer)
+	output := crtAge(age)
+	fmt.Println(output)
+}
+
+func crtAge(age int) int {
+	return age - 18
+}
