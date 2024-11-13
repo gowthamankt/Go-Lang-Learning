@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	age := 22
+	fmt.Println(age)
+	output := crtAge(age)
+	fmt.Println(output)
+}
+
+func crtAge(age int) int {
+	return age - 18
+}
