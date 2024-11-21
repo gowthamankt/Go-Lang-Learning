@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func main() {
+	userName := make([]string, 2, 5)
+	userName[0] = "Julie"
+
+	userName = append(userName, "Max")
+	userName = append(userName, "Manuel")
+
+	fmt.Println(userName)
+}
